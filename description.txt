@@ -1,0 +1,30 @@
+create a python app that automatically accepts matches for league of legends players
+functions to use:
+im1 = pyautogui.screenshot()
+locate(needleImage, haystackImage, grayscale=True)
+pyautogui.hotkey('alt', 'tab') 
+pyautogui.write('Hello world!', interval=0.25)
+pyautogui.click(get_center('random.png')
+
+phase detection:
+while true loop:
+takes a screenshot every 2 seconds, looks for 3 things that will determine which phase we are in.
+
+
+phase 1: accept (by seeing accept match button, we know this phase is over if we see search2.png, otherwise we keep looping)
+edge case: sometimes not everyone accept, so we have to accept more than twice, so if we see search2.png we can confidently say that phase1 is over (put a message in display box: 
+
+pseudo code:
+while (pyautogui.locateOnScreen('looksLikeThis.png') == None:
+	look for accept button:
+
+
+phase 2: ban champions (we know this phase starts we see ban_a_champ.png, we know its over when we see bans_locked_in.png)
+message1: Starting ban phase
+message2: Ban phase over!
+
+phase 3: pick champ (we know this phase starts when we see pick_your_champion.png, we know its over when we see prepare_for_battle.png)
+message1: Starting pick phase
+message2: Pick phase over!
+
+Default text box: Select you phases and press start!
